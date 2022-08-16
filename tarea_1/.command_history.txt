@@ -1,0 +1,199 @@
+2+2
+>>> 2+2
+git*
+*git
+git *
+phyton
+cd documentos
+cd documents
+mkdir act1
+cd act1
+man
+mkdir man
+mkdirman
+mkdir-man
+mkdir_man
+mkdir/man
+rm man
+rm man
+sudo rn man
+ls
+..
+rm man
+mkdir folder
+cd folder
+mkdir subfolder
+cd subfolder
+touch act1.txt > 'hello world'
+cp act1.txt
+cd folder
+cd ..
+paste act1.txt
+pt act1.txt
+cd subfolder
+cp act1.txt
+list
+ls
+cp act1.txt
+touch act2.txt
+echo 'hello world' > act2.txt
+list
+ls
+cp act2.txt
+cp
+cp act2
+cp act1
+cpact1
+cp act1
+cp -act1
+cp act1.txt
+cp -man
+cp --man
+cp -man
+copy -act1.txt
+cp act1.txt
+act1.txt
+act1
+vim act1
+cd subfolder
+cd documents
+cd folder
+cd act1
+cd folder
+cd subfolder
+echo "hola mundo" > act1.txt
+cp act1.txt
+cd ~
+list -a
+ls -a
+ls -m
+ls -man
+~
+cd ~
+mkdir act1
+cd mkdir
+cd act1
+mkdir folder
+cd folder
+mkdir subfolder
+cd subfolder
+touch act1.txt
+echo "hello world" >> act1.txt
+ls
+cp act1.txt/../..
+cp act1.txt ~/act1
+cd ../..
+list
+ls
+cd~
+cd ~
+rn -r act1
+rm -r act1
+ls
+explorer
+cd d:\\
+list
+ls
+cd odurab97
+ls
+cd vario
+ls
+ls -l
+explorer
+open frem.mp4
+op frem.mp4
+frem.mp4
+cd ~
+clean
+git clone https://github.com/chnnxyz/data_science_for_everyone_2022_q3.git
+cd git-demo-dsfe
+cd git-demo-dsfe
+clone git DSFE---practica-1
+git clone DSFE---practica-1
+git clone DSFE--practica-1
+git clone https://github.com/bgmartinezr/DSFE---practica-1.git
+cd git
+explorer
+cd DSFE--practica-1
+cd git-DSfE--practica-1
+cd DSFE---practica-1
+git chekout
+git checkout
+man git
+man -git
+man -git
+mangit
+git -man
+mkdir folder1
+mkdir folder 2
+cd folder1
+touch helloworld.txt
+echo >> "hola-mundo" >> helloworld.txt
+touch "holamundo" >> holamundo.txt
+echo >> "holamundo">>holamundo.txt
+ls
+git commit
+git config --global user.email "abel097@hotmail.com"
+git config --global user.name "bgmartinezr"
+git commit
+git add
+./
+git add gitignore
+git commit
+git checkout
+cd ../
+git add folder1
+git commit
+git status
+git push
+git checkout
+touch holamundo.py
+git commit
+git add folder1
+git commit
+git merge
+git push
+git checkuot
+git checkout
+git checkout main
+git push
+git pull
+git add holamundo.py
+git commit
+git push
+git -b
+git merge
+git push
+git rm
+cd d:\\
+ls
+cd odurab97
+ls
+cd program
+git clone https://github.com/bgmartinezr/Tareas.git
+cd tareas
+mkdir tarea_1
+cd tarea_1
+mkdir static
+cd static
+mkdir css js
+cd ..
+mkdir templates
+cd templates
+touch index.html
+ls
+cd ..
+touch app.py README.md
+git commit -m "Estructura de carpetas creada"
+git branch tarea_1
+git checkout tarea_1
+git commit -m "Estructura de carpetas creada"
+touch command_history.txt >> history
+echo -m
+echo -man
+echo history > command_history.txt
+history
+cp history
+cp history > command_history.txt
+echo history >> command_history.txt
+history -w .command_history.txt
