@@ -4,7 +4,7 @@ import time
 
 #Clase Vampiro y todas sus habilidades
 class Vampire:
-    
+
     hp = 100
     mp = 25
     status = 'OK'
@@ -15,18 +15,18 @@ class Vampire:
                  height:float) -> None:
         self.name = name
         self.height = height
-#Funcion de tomar daño  
+#Funcion de tomar daño
     def take_damage(self, x:float) -> None:
         self.hp -= x
-            
-#Habilidades de ataque    
+
+#Habilidades de ataque
     def leech_blood(self, target) -> None:
         dmg = random.randint(1,8)
         target.take_damage(dmg)
         self.hp += math.floor(dmg/2)
         print(f'{self.name} te chupa la sangre por {dmg} y se cura {math.floor(dmg/2)} \n')
         self.set_turn_activity(False)
-    
+
     def hypnosis(self, target) -> None:
         if self.mp >= 5:
             self.mp -= 5
@@ -35,7 +35,7 @@ class Vampire:
         else:
             print('Miss \n')
         self.set_turn_activity(False)
-    
+
     def attack(self,target) -> None:
         if self.status=='confusion':
             dice = random.randint(1,20)
@@ -50,8 +50,8 @@ class Vampire:
             target.take_damage(dmg)
             print(f'{self.name} golpea a {target.name} por {dmg} de daño')
         self.set_turn_activity(False)
-    
-#Funcion que establece el turno   
+
+#Funcion que establece el turno
     def set_turn_activity(self, activity) -> None:
         self.active_turn = activity
 
@@ -62,7 +62,7 @@ class Person:
     status = 'OK'
     potions = 2
     active_turn = True #Determina si te toca o le toca al oponente
-    safe = False 
+    safe = False
 #Inicializacion del personaje
     def __init__(self, name:str, weapon:str) -> None:
         self.name = name
@@ -77,10 +77,10 @@ class Person:
 
     def set_status(self, status:str):
         self.status = status
-#Estatus de turno    
+#Estatus de turno
     def set_turn_activity(self, activity) -> None:
         self.active_turn = activity
-        
+
 #Ataques y hechizos
     def attack(self,target) -> None:
         if self.status=='confusion':
@@ -96,7 +96,7 @@ class Person:
             target.take_damage(dmg)
             print(f'{self.name} golpea a {target.name} por {dmg} de daño \n')
         self.set_turn_activity(False)
-        
+
     def h_fire(self,target) -> None:
         if self.status=='confusion':
             dice = random.randint(1,20)
@@ -111,7 +111,7 @@ class Person:
             target.take_damage(dmg)
             print(f'{self.name} hizo hechizo de fuego a {target.name} por {dmg} de daño \n')
         self.set_turn_activity(False)
-        
+
     def h_ice(self,target) -> None:
         if self.status=='confusion':
             dice = random.randint(1,20)
@@ -125,8 +125,8 @@ class Person:
             dmg = random.randint(5,20)
             target.take_damage(dmg)
             print(f'{self.name} hizo hechizo de hielo a {target.name} por {dmg} de daño \n')
-        self.set_turn_activity(False)     
-         
+        self.set_turn_activity(False)
+
     def h_thunder(self,target) -> None:
         if self.status=='confusion':
             dice = random.randint(1,20)
@@ -140,8 +140,8 @@ class Person:
             dmg = random.randint(5,20)
             target.take_damage(dmg)
             print(f'{self.name} hizo hechizo de trueno a {target.name} por {dmg} de daño \n')
-        self.set_turn_activity(False)          
-#Curacion y escape    
+        self.set_turn_activity(False)
+#Curacion y escape
     def drink_potion(self) -> None:
         if self.potions >= 0:
             dice1 = random.randint(1,4)
@@ -154,18 +154,18 @@ class Person:
             print('Buscas en tu mochila una pocion \n')
             time.sleep(2)
             print('Pierdes tu turno por no saber manejar tu inventario \n')
-    
+
     def check_inventory(self):
         print(f'tienes {self.potions} pociones \n')
-        
-#Tira un dado para ver si puedes escapar   
+
+#Tira un dado para ver si puedes escapar
     def escape(self) -> None:
         dice = random.randint(1,20)
         if dice == 20:
             self.safe = True
         else:
             print('No puedes escapar, pelea \n')
-            
+
 #Cambio de turno
 def change_turns(player,vampire):
     player.active_turn = not player.active_turn
@@ -177,7 +177,7 @@ if __name__ == '__main__':
     print('Bienvenido a la aventura \n\n')
     player_name = input('Dime tu nombre: ')
     weapon = None
-    
+
     while weapon not in ['espada','hacha']:
         print('Puedes usar una espada o un hacha')
         print('Ingresa la opcion que prefieras \n')
@@ -190,7 +190,7 @@ if __name__ == '__main__':
             weapon = 'hacha'
         else:
             weapon= 'Selecciona un arma valida \n'
-#Inicio narrativa    
+#Inicio narrativa
     player = Person(player_name, weapon)
     time.sleep(1)
     print(f'Eres {player.name} y cargas una {player.weapon} \n')
@@ -206,12 +206,12 @@ if __name__ == '__main__':
     time.sleep(1)
     print(f'Ves una figura a la distancia, parece medir {vampire.height} cm \n')
     time.sleep(3)
-    print('Humano, me has despertado de mi largo sueño \n') 
+    print('Humano, me has despertado de mi largo sueño \n')
     print(f' SOY {vampire.name.upper()} EL VAMPIRO PREPARATE PARA MORIR \n\n\n\n')
-  
+
 #############################################################################
 
-    print('''                  /##########\
+    print(r'''                 /##########\
                               /   \###/    \
                              /     \#/      \
                           /\|               |/\
@@ -231,12 +231,12 @@ if __name__ == '__main__':
                    /##################\###/###########\
                   /###################\#/##############\
                  /####################/#################\
-                /###################/####################\\n\n\n\n''')
-  
-#############################################################################  
-  
-    
-  
+                /###################/####################\ \n\n\n\n''')
+
+#############################################################################
+
+
+
 # Inicio de combate
     time.sleep(2)
     print('\n\n')
@@ -251,7 +251,7 @@ if __name__ == '__main__':
     else:
         player.set_turn_activity(False)
         vampire.set_turn_activity(True)
-    
+
 # Checa que ambos sigan con vida o el jugador no haya escapado
     while player.hp > 0 and vampire.hp > 0 and not player.safe:
         while player.active_turn:
@@ -259,13 +259,13 @@ if __name__ == '__main__':
             print(f'Tu HP: {player.hp}')
             print(f'HP de tu rival: {vampire.hp}')
             print('/'*80)
-            
+
 #Menu del jugador
             actions = [1,2,3,4,5]
             action = 0
             while action not in actions:
                 print('\n')
-            
+
                 print('Elige tu accion')
                 print('1. Atacar')
                 print('2. Tomar pocion ')
@@ -274,7 +274,7 @@ if __name__ == '__main__':
                 print('5. Hechizos')
 
                 action = int(input('Que quieres hacer? \n\n\n'))
-            
+
             if action == 1:
                 player.attack(vampire)
             elif action == 2:
@@ -288,14 +288,14 @@ if __name__ == '__main__':
                 hechizo = 0
                 while hechizo not in hechizos:
                     print('\n')
-                
+
                     print('Elige tu hechizo')
                     print('1. Fuego')
                     print('2. Hielo ')
                     print('3. Trueno')
 
                     action = int(input('Escoge un hechizo \n\n\n'))
-                    
+
                     if action == 1:
                         player.h_fire(vampire)
                         break
@@ -305,7 +305,7 @@ if __name__ == '__main__':
                     else:
                         player.h_thunder(vampire)
                         break
-        
+
         while vampire.active_turn:
             print('/'*80)
             print(f'Tu HP: {player.hp}')
@@ -322,7 +322,7 @@ if __name__ == '__main__':
 
         vampire.set_turn_activity(not vampire.active_turn)
         player.set_turn_activity(not player.active_turn)
-    
+
     if vampire.hp <= 0:
         print('Felicidades, has vencido al vampiro \n')
         print('Fanfarrias ♫ \n')
